@@ -2,7 +2,7 @@
 
 Simple Conference application where an *conference owner* can create a conference. Features are:
 
-1. Set ticket *price* of conference in ether. Could be (DAI)[], (USDC)[] or any other token. E.g an ERC20 token
+1. Set ticket *price* of conference in ether. Could be [DAI](https://en.wikipedia.org/wiki/Dai_(cryptocurrency), [USDC](https://en.wikipedia.org/wiki/USD_Coin) or any other token. E.g an [ERC20](https://ethereum.org/en/developers/docs/standards/tokens/erc-20/)-token.
 2. Set _reward factor_ which is used to decide how much *speakers* will recieve as reward.
 3. Auth actors before they can be *attendees* or *speakers* 
   * This is done like this here, but we don't want the *conference owner* to pre-auth the actors. Should be done otherwise e.g. third-party authorization which then call the `auth` function
@@ -14,6 +14,7 @@ Simple Conference application where an *conference owner* can create a conferenc
 This repo is created to illustrate role logic in smart contracts and demonstrate development and testing of smart contract and how to interact with them from js/ts.
 
 ## Get started
+This process will let you run the frontend(dApp) with a local blockchain that runs the [Conference](/contracts/Conference.sol) contract. This let you use and develop you dApp locally. Hot-reload is enabled for both the contracts and frontend-code.
 
 1. Clone the repo and cd into it `git clone https://github.com/symfoni/conference MyConference && cd MyConference`
 2. Install deps with yarn `yarn` or npm `npm install`
@@ -37,17 +38,17 @@ It runs up a Hardhat node, compile contracts, generates typescript interfaces, c
 13. Set a password(not important to be secure because this is just for testing on a test network)
 14. Click "All done"
 15. You will now see your Metamask account
-16. Click on the circular "account picture" in top right corner.
+16. Click on your account avatar in top right corner.
 17. Click on "Settings"
 18. Go to "Advanced"
 19. Enable "Show test networks"
 20. Close Settings
 21. Change network in Metmask extension to local network at `http://localhost:8545`. This is the network you have running locally with `hardhat` from *Get Started*
-
 <img src="images/metamask-network.png" width="200">
+22. Click on your "avatar" again to add more Accounts. Tips: give your accounts role names like "conference owner", "attendee" etc for easier testing.
+    1.  The 10 first accounts will have 10000ETH to play with (test ether).
 
-
-22.  Ensure Metamask RPC is set to `http://localhost:8545` and chainID `31337`.
+23.   Ensure Metamask RPC is set to `http://localhost:8545` and chainID `31337`.
 
 The frontend should open at http://localhost:3000/
 
