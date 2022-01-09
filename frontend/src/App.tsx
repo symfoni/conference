@@ -1,31 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import "./App.css";
+import Navbar from "./components/NavBar";
 import { Symfoni } from "./hardhat/SymfoniContext";
-import { Greeter } from './components/Greeter';
+import { Admin } from "./pages/Admin";
+import { Home } from "./pages/Home";
+import { Speakers } from "./pages/Speakers";
+import { Tickets } from "./pages/Tickets";
 
 function App() {
-
   return (
-    <div className="App">
-      <header className="App-header">
-        <Symfoni autoInit={true} >
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-        </a>
-          <Greeter></Greeter>
-        </Symfoni>
-      </header>
-    </div>
+    <Symfoni autoInit={true}>
+      <Router>
+        <div className="App">
+          <Navbar />
+          <div style={{ margin: "10%", width: "60%" }}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/admin" element={<Admin />} />
+              <Route path="/tickets" element={<Tickets />} />
+              <Route path="/speakers" element={<Speakers />} />
+            </Routes>
+          </div>
+        </div>
+      </Router>
+    </Symfoni>
   );
 }
 
