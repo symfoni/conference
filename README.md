@@ -13,12 +13,12 @@ Simple Conference application where an *conference owner* can create a conferenc
 
 This repo is created to illustrate role logic in smart contracts and demonstrate development and testing of smart contract and how to interact with them from js/ts.
 
-3. Get started
+## Get started
 
 1. Clone the repo and cd into it `git clone https://github.com/symfoni/conference MyConference && cd MyConference`
 2. Install deps with yarn `yarn` or npm `npm install`
 3. Run tests by `npx hardhat test`
-3. Start hardhat `npx hardhat node --watch`
+4. Start hardhat `npx hardhat node --watch`
 
 ![](https://media.giphy.com/media/9l6z9MzXfHX9gKzbvU/giphy.gif)
 
@@ -26,29 +26,28 @@ This repo is created to illustrate role logic in smart contracts and demonstrate
 It runs up a Hardhat node, compile contracts, generates typescript interfaces, creates React context and instantiates your contract instances and factories with frontend provider.
 ```
 
-4. Open up a new terminal
-5. Enter the frontend directory: `cd frontend`
-6. Install dependencies: `npm install`
-7. Open your browser and install Metamask. *IMPORTANT! Do this in a seperate profile in your browser to prevent using your real Metamask wallet*
-8. Open Metamask extension
-9. Click `Get started`
-10. Click `Import wallet` by the  `No, I already have a Secret Recovery Phrase` option. Click `I agree`.
-11. In the "Secret Recovery Phrase, use `test test test test test test test test test test test junk`. This is the same phrase used for deployment of the smart contract on your local hardhat node network.
-12. Set a password(not important to be secure because this is just for testing on a test network)
-13. Click "All done"
-14. You will now see your Metamask account
-15. Click on the circular "account picture" in top right corner.
-16. Click on "Settings"
-17. Go to "Advanced"
-18. Enable "Show test networks"
-19. Close Settings
-20. Change network in Metmask extension to local network at `http://localhost:8545`. This is the network you have running locally with `hardhat` from *Get Started*
+5. Open up a new terminal
+6. Enter the frontend directory: `cd frontend`
+7. Install dependencies: `npm install` and start react app with `npm start`
+8. Open your browser and install Metamask. *IMPORTANT! Do this in a seperate profile in your browser to prevent using your real Metamask wallet*
+9. Open Metamask extension
+10. Click `Get started`
+11. Click `Import wallet` by the  `No, I already have a Secret Recovery Phrase` option. Click `I agree`.
+12. In the "Secret Recovery Phrase, use `test test test test test test test test test test test junk`. This is the same phrase used for deployment of the smart contract on your local hardhat node network.
+13. Set a password(not important to be secure because this is just for testing on a test network)
+14. Click "All done"
+15. You will now see your Metamask account
+16. Click on the circular "account picture" in top right corner.
+17. Click on "Settings"
+18. Go to "Advanced"
+19. Enable "Show test networks"
+20. Close Settings
+21. Change network in Metmask extension to local network at `http://localhost:8545`. This is the network you have running locally with `hardhat` from *Get Started*
 
 <img src="images/metamask-network.png" width="200">
 
 
-21.  Ensure Metamask RPC is set to `http://localhost:8545` and chainID `31337`.
-12. Start the React app: `npm start`
+22.  Ensure Metamask RPC is set to `http://localhost:8545` and chainID `31337`.
 
 The frontend should open at http://localhost:3000/
 
