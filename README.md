@@ -14,7 +14,7 @@ Simple Conference application where an *conference owner* can create a conferenc
 This repo is created to illustrate role logic in smart contracts and demonstrate development and testing of smart contract and how to interact with them from js/ts.
 
 ## Get started
-This process will let you run the frontend(dApp) with a local blockchain that runs the [Conference](/contracts/Conference.sol) contract. This let you use and develop you dApp locally. Hot-reload is enabled for both the contracts and frontend-code.
+This process will let you run the frontend(dApp) with a local blockchain that runs the [Conference](/contracts/Conference.sol) contract. This let you use and develop you dApp locally. Hot-reload is enabled for both the contracts and frontend-code. You will need to download the [Metamask](https://chrome.google.com/webstore/detail/metamask/) to use the dApp with ethereum accounts(signing transactions).
 
 1. Clone the repo and cd into it `git clone https://github.com/symfoni/conference MyConference && cd MyConference`
 2. Install deps with yarn `yarn` or npm `npm install`
